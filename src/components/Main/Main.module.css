@@ -1,0 +1,149 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  gap: 1rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.subTitle {
+  font-size: small;
+  color: gray;
+}
+
+.linkBlock{
+  display: flex;
+}
+
+.addLinkBtn {
+  display: flex;
+  cursor: pointer;
+  width: fit-content;
+  border: none;
+  background: none;
+  color: rgb(13, 13, 158);
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.addLinkBtn:hover {
+  background-color: rgb(205, 227, 255);
+}
+
+.addLinkBtn:disabled {
+  color: gray;
+  cursor: not-allowed;
+}
+
+.linksList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 5px;
+  align-items: center;
+}
+
+.linkItem {
+  display: flex;
+  background-color: rgb(192, 188, 188);
+  align-items: center;
+  border-radius: 5px;
+  max-width: 20rem;
+}
+
+.linkItemAncor,
+.editBtn {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(71, 71, 71);
+  cursor: pointer;
+  padding: 0.3rem;
+  overflow: hidden;
+}
+
+.deleteBtn {
+  display: flex;
+  color: rgb(71, 71, 71);
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  margin-right: 0.3rem;
+  cursor: pointer;
+}
+
+.deleteBtn:disabled {
+  display: none;
+}
+
+.deleteBtn:hover {
+  background-color: darkgrey;
+}
+
+.editBtn {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+}
+
+.editBtn:hover {
+  background-color: rgb(192, 188, 188);
+}
+
+.editBtn:disabled {
+  color: gray;
+  cursor: not-allowed;
+}
+
+.linkIcon {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.linkName {
+  font-size: small;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.addLinkForm {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.okayBtn,
+.cancelBtn {
+  display: flex;
+  align-self: center;
+  background: none;
+  border: none;
+  padding: 0.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.okayBtn:hover,
+.cancelBtn:hover {
+  background-color: rgb(192, 188, 188);
+}
+
+.addLinkInput {
+  border: 1px solid rgb(192, 188, 188);
+  border-radius: 5px;
+  padding: 0.2rem;
+  outline: transparent;
+}
+
+.addLinkInput:hover,
+.addLinkInput:focus {
+  border-color: rgb(25, 110, 221);
+}
+
+.addLinkInput::placeholder {
+  color: rgb(131, 129, 127);
+}
