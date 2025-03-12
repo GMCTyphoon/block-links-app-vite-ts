@@ -14,11 +14,20 @@ export const LinkItem: FC<LinkItemProps> = ({
   handleDeleteLink,
   id,
 }) => {
+  
+  let formattedLink = value.trim().toLowerCase();
+  if (
+    !formattedLink.startsWith('http://') &&
+    !formattedLink.startsWith('https://')
+  ) {
+    formattedLink = `https://${formattedLink}`;
+  }
+
   return (
     <div className={classes.linkItem}>
       <a
         className={classes.linkItemAncor}
-        href={value}
+        href={formattedLink}
         target="_blank"
         rel="noopener noreferrer"
       >

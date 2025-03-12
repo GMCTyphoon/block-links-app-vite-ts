@@ -12,7 +12,7 @@
   color: gray;
 }
 
-.linkBlock{
+.linkBlock {
   display: flex;
 }
 
@@ -51,6 +51,15 @@
   align-items: center;
   border-radius: 5px;
   max-width: 20rem;
+}
+
+.lastRowContainer {
+  display: flex;
+  gap: 5px;
+}
+
+.buttonsContainer {
+  display: flex;
 }
 
 .linkItemAncor,
@@ -109,6 +118,7 @@
   font-size: small;
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .addLinkForm {
@@ -146,4 +156,9 @@
 
 .addLinkInput::placeholder {
   color: rgb(131, 129, 127);
+}
+
+.errorMessage {
+  color: red;
+  font-size: small;
 }
