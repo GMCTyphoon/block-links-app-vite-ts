@@ -26,6 +26,7 @@ export const LinksList: FC = () => {
   const [initialLinks, setInitialLinks] = useState<Link[]>([]);
   const [isAdding, setIsAdding] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     if (LINKS) {
@@ -41,15 +42,17 @@ export const LinksList: FC = () => {
   const handleFormSubmit = ({ id, value }: Link) => {
     console.log(id, value);
     if (links.some((link) => link.value === value)) {
-      setIsAdding(false);
+      setError('Такая ссылка уже существует.');
       return;
     }
     setLinks((prev) => [...prev, { id, value }]);
     setIsAdding(false);
+    setError('');
   };
 
   const handleCancelAdding = () => {
     setIsAdding(false);
+    setError('');
   };
 
   const handleStartEditing = () => {
@@ -173,6 +176,7 @@ export const LinksList: FC = () => {
           + Добавить ссылку
         </button>
       )}
+      {error && <div className={classes.errorMessage}>{error}</div>}
     </>
   );
 };
