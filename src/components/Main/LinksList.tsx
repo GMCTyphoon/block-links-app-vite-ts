@@ -40,6 +40,10 @@ export const LinksList: FC = () => {
 
   const handleFormSubmit = ({ id, value }: Link) => {
     console.log(id, value);
+    if (links.some((link) => link.value === value)) {
+      setIsAdding(false);
+      return;
+    }
     setLinks((prev) => [...prev, { id, value }]);
     setIsAdding(false);
   };
